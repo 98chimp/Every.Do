@@ -438,6 +438,7 @@
 				EB71260F1AC34809002F3AFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB7126101AC34809002F3AFE /* Build configuration list for PBXNativeTarget "Every.DoTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				EB7126121AC34809002F3AFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
