@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -32,14 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDoTitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-sG-9DF">
-                                <rect key="frame" x="52" y="108" width="92" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemDescription" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ5-fB-yPR">
-                                <rect key="frame" x="96" y="198" width="457" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItemDescription" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ5-fB-yPR">
+                                <rect key="frame" x="76" y="188" width="448" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -50,17 +44,24 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDoTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-sG-9DF">
+                                <rect key="frame" x="76" y="108" width="448" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="fTA-NY-ghZ" secondAttribute="centerY" constant="-115" id="CIF-At-CaE"/>
-                            <constraint firstItem="vJ5-fB-yPR" firstAttribute="top" secondItem="RXC-sG-9DF" secondAttribute="bottom" constant="61" id="NLN-gr-E8w"/>
+                            <constraint firstItem="RXC-sG-9DF" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="60" id="Jrz-ui-9uj"/>
+                            <constraint firstItem="vJ5-fB-yPR" firstAttribute="top" relation="lessThanOrEqual" secondItem="RXC-sG-9DF" secondAttribute="bottom" constant="61" id="NLN-gr-E8w"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="vJ5-fB-yPR" secondAttribute="bottom" priority="750" constant="390" id="Q3z-xI-2f2"/>
                             <constraint firstItem="RXC-sG-9DF" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="44" id="SbW-a1-K7m"/>
-                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="RXC-sG-9DF" secondAttribute="trailing" constant="460" id="TT4-yJ-dQI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vJ5-fB-yPR" secondAttribute="trailing" constant="31" id="UVh-mO-SY8"/>
-                            <constraint firstItem="RXC-sG-9DF" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="36" id="XPG-8W-zcd"/>
-                            <constraint firstItem="vJ5-fB-yPR" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="80" id="pfI-oR-6AQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vJ5-fB-yPR" secondAttribute="trailing" constant="60" id="UVh-mO-SY8"/>
+                            <constraint firstAttribute="centerX" secondItem="RXC-sG-9DF" secondAttribute="centerX" id="cAx-kn-dmm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RXC-sG-9DF" secondAttribute="trailing" constant="60" id="dka-9k-BPm"/>
+                            <constraint firstItem="vJ5-fB-yPR" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="60" id="pfI-oR-6AQ"/>
                             <constraint firstAttribute="centerX" secondItem="fTA-NY-ghZ" secondAttribute="centerX" id="v0T-xB-McE"/>
                         </constraints>
                     </view>
