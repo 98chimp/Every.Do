@@ -10,6 +10,10 @@
 
 @interface DetailViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *detailedToDoTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *detailedItemDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *detailedPriorityLabel;
+
 @end
 
 @implementation DetailViewController
@@ -28,7 +32,28 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.detailedToDoTitleLabel.text = self.detailItem.title;
+        self.detailedItemDescriptionLabel.text = self.detailItem.itemDescription;
+        switch (self.detailItem.priority) {
+            case 0:
+                self.detailedPriorityLabel.text = @"";
+                break;
+            case 1:
+                self.detailedPriorityLabel.text = @"!";
+                self.detailedPriorityLabel.textColor = [UIColor orangeColor];
+                break;
+            case 2:
+                self.detailedPriorityLabel.text = @"!!";
+                self.detailedPriorityLabel.textColor = [UIColor orangeColor];
+                break;
+            case 3:
+                self.detailedPriorityLabel.text = @"!!!";
+                self.detailedPriorityLabel.textColor = [UIColor orangeColor];
+                break;
+            default:
+                self.detailedPriorityLabel.text = @"";
+                break;
+        }
     }
 }
 

@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTableViewCell.h"
+#import "ToDo.h"
+#import "NewItemViewController.h"
 
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
-
+@property (strong, nonatomic) NewItemViewController *nItemViewController;
 
 @end
 
