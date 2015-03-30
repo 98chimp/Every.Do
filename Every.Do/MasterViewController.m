@@ -79,6 +79,45 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    NSArray *savedToDos = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath]];
+    if (savedToDos) {
+        self.toDoItems = [savedToDos mutableCopy];
+    }
+}
+
+- (void)insertNewObject:(id)sender {
+    
+    NewItemViewController *source = [segue sourceViewController];
+    ToDo *item = source.toDo;
+    if (item != nil) {
+        if (!self.toDoItems) {
+            self.toDoItems = [[NSMutableArray alloc] init];
+        }
+        [self.toDoItems insertObject:item atIndex:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+
+
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Add a Book" message:@"Enter Book Below" preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+//        textField.placeholder= @"Book Name";
+//        self.myTextField = textField;
+//    }];
+//
+//    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+//        [alert dismissViewControllerAnimated:true completion:nil];
+//    }]];
+//    
+//    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(NSString*)getFilePath{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    return [documentsDirectoryPath stringByAppendingPathComponent:@"appData"];
 }
 
 #pragma mark - Segues
@@ -95,17 +134,10 @@
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
-    NewItemViewController *source = [segue sourceViewController];
-    ToDo *item = source.toDo;
-    if (item != nil) {
-        if (!self.toDoItems) {
-            self.toDoItems = [[NSMutableArray alloc] init];
-        }
-        [self.toDoItems insertObject:item atIndex:0];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView reloadData];
-    }
+    ToDo *toDo = [ToDo new];
+    [self.toDoItems addObject:toDo];
+    [NSKeyedArchiver archiveRootObject:self.toDoItems toFile:[self getFilePath]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
@@ -193,7 +225,7 @@
     }];
     
     outstandingAction.backgroundColor = [UIColor redColor];
-    completedAction.backgroundColor = [UIColor colorWithRed:0 green:0.6 blue:0.2 alpha:1];
+    completedAction.backgroundColor = [UIColor greenColor];
     
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
@@ -225,4 +257,5 @@
 
 - (IBAction)addNewItem:(UIBarButtonItem *)sender {
 }
+
 @end

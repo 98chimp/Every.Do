@@ -95,8 +95,6 @@
 			children = (
 				EB7125EE1AC34809002F3AFE /* AppDelegate.h */,
 				EB7125EF1AC34809002F3AFE /* AppDelegate.m */,
-				EB7126161AC355FF002F3AFE /* ToDo.h */,
-				EB7126171AC355FF002F3AFE /* ToDo.m */,
 				EB7125F11AC34809002F3AFE /* MasterViewController.h */,
 				EB7125F21AC34809002F3AFE /* MasterViewController.m */,
 				EB7125F41AC34809002F3AFE /* DetailViewController.h */,
@@ -105,6 +103,8 @@
 				EB7126221AC367F4002F3AFE /* CustomTableViewCell.m */,
 				EB7126241AC3DB5E002F3AFE /* NewItemViewController.h */,
 				EB7126251AC3DB5E002F3AFE /* NewItemViewController.m */,
+				EB7126161AC355FF002F3AFE /* ToDo.h */,
+				EB7126171AC355FF002F3AFE /* ToDo.m */,
 				EB7125F71AC34809002F3AFE /* Main.storyboard */,
 				EB7125FA1AC34809002F3AFE /* Images.xcassets */,
 				EB7125FC1AC34809002F3AFE /* LaunchScreen.xib */,
