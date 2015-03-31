@@ -18,6 +18,7 @@
 		EB7126181AC355FF002F3AFE /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7126171AC355FF002F3AFE /* ToDo.m */; };
 		EB7126231AC367F4002F3AFE /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7126221AC367F4002F3AFE /* CustomTableViewCell.m */; };
 		EB7126261AC3DB5E002F3AFE /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7126251AC3DB5E002F3AFE /* NewItemViewController.m */; };
+		EBC0AD011ACA2DB100EE6AA7 /* SaveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC0AD001ACA2DB100EE6AA7 /* SaveObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		EB7126221AC367F4002F3AFE /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		EB7126241AC3DB5E002F3AFE /* NewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemViewController.h; sourceTree = "<group>"; };
 		EB7126251AC3DB5E002F3AFE /* NewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemViewController.m; sourceTree = "<group>"; };
+		EBC0ACFF1ACA2DB000EE6AA7 /* SaveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveObject.h; sourceTree = "<group>"; };
+		EBC0AD001ACA2DB100EE6AA7 /* SaveObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				EB7126251AC3DB5E002F3AFE /* NewItemViewController.m */,
 				EB7126161AC355FF002F3AFE /* ToDo.h */,
 				EB7126171AC355FF002F3AFE /* ToDo.m */,
+				EBC0ACFF1ACA2DB000EE6AA7 /* SaveObject.h */,
+				EBC0AD001ACA2DB100EE6AA7 /* SaveObject.m */,
 				EB7125F71AC34809002F3AFE /* Main.storyboard */,
 				EB7125FA1AC34809002F3AFE /* Images.xcassets */,
 				EB7125FC1AC34809002F3AFE /* LaunchScreen.xib */,
@@ -244,6 +249,7 @@
 				EB7126231AC367F4002F3AFE /* CustomTableViewCell.m in Sources */,
 				EB7125ED1AC34809002F3AFE /* main.m in Sources */,
 				EB7126261AC3DB5E002F3AFE /* NewItemViewController.m in Sources */,
+				EBC0AD011ACA2DB100EE6AA7 /* SaveObject.m in Sources */,
 				EB7125F61AC34809002F3AFE /* DetailViewController.m in Sources */,
 				EB7126181AC355FF002F3AFE /* ToDo.m in Sources */,
 			);

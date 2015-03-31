@@ -10,16 +10,24 @@
 
 @implementation ToDo
 
-- (instancetype)initWithTitle:(NSString *)title itemDescription:(NSString *)itemDescription priority:(NSInteger)priority isCompleted:(BOOL)isCompleted
+- (id)initWithCoder:(NSCoder *)decoder
 {
     self = [super init];
     if (self) {
-        self.title = title;
-        self.itemDescription = itemDescription;
-        self.priority = priority;
-        self.isCompleted = isCompleted;
+        self.title = [decoder decodeObjectForKey:@"title"];
+        self.itemDescription = [decoder decodeObjectForKey:@"itemDescription"];
+        self.priority = [decoder decodeIntForKey:@"priority"];
+        self.isCompleted = [decoder decodeBoolForKey:@"isCompleted"];
     }
     return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:self.title forKey:@"title"];
+    [encoder encodeObject:self.itemDescription forKey:@"itemDescription"];
+    [encoder encodeInteger:self.priority forKey:@"priority"];
+    [encoder encodeBool:self.isCompleted forKey:@"isCompleted"];
 }
 
 @end

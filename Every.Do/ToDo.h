@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ToDo : NSObject
+@interface ToDo : NSObject<NSCoding>
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *itemDescription;
 @property (assign, nonatomic) NSInteger priority;
 @property (assign, nonatomic) bool isCompleted;
-
-- (instancetype)initWithTitle:(NSString *)title itemDescription:(NSString *)itemDescription priority:(NSInteger)priority isCompleted:(BOOL)isCompleted;
 
 @end
